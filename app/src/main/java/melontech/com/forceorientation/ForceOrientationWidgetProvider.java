@@ -6,10 +6,12 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.Surface;
 import android.widget.RemoteViews;
 import android.widget.Toast;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by dpanayotov on 2/10/2016
@@ -22,7 +24,14 @@ public class ForceOrientationWidgetProvider extends AppWidgetProvider {
 
     private static final String ACTION_FORCE_ORIENTATION_CCW = "com.melontech.ACTION_FORCE_ORIENTATION_CCW";
 
-    private static final int MAX_VALUE = 4;
+    private static final Map<Integer, String> DIRECTIONS = new HashMap<>();
+
+    static {
+        DIRECTIONS.put(0, "/\\");
+        DIRECTIONS.put(1, ">");
+        DIRECTIONS.put(2, "\\/");
+        DIRECTIONS.put(3, "<");
+    }
 
     RemoteViews remoteViews;
 
@@ -84,7 +93,7 @@ public class ForceOrientationWidgetProvider extends AppWidgetProvider {
         //check boundaries [0:3]
         rotation = rotation == 4 ? 0 : rotation;
         rotation = rotation == -1 ? 3 : rotation;
-        Log.d("zxc", "" + rotation);
+        makeRotationToast(rotation, context);
         Settings.System.putInt(context.getContentResolver(), Settings.System.USER_ROTATION, rotation);
     }
 
@@ -103,5 +112,9 @@ public class ForceOrientationWidgetProvider extends AppWidgetProvider {
 
     private int getCurrentRotation(Context context) throws Settings.SettingNotFoundException {
         return Settings.System.getInt(context.getContentResolver(), Settings.System.USER_ROTATION);
+    }
+
+    private void makeRotationToast(int roation, Context context){
+        Toast.makeText(context, DIRECTIONS.get(roation), Toast.LENGTH_SHORT).show();
     }
 }
