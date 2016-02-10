@@ -17,6 +17,21 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <receiver android:name="ForceOrientationWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+             <intent-filter>
+                <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_LEFT" />
+            </intent-filter>
+             <intent-filter>
+                <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_AUTO" />
+            </intent-filter>
+             <intent-filter>
+                <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_RIGHT" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/force_orientation_appwidget_info" />
+        </receiver>
     </application>
 
 </manifest>
