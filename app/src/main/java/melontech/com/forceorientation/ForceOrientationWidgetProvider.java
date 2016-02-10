@@ -98,6 +98,7 @@ public class ForceOrientationWidgetProvider extends AppWidgetProvider {
     }
 
     private void resetRotation(Context context) {
+        Toast.makeText(context, "O", Toast.LENGTH_SHORT).show();
         Settings.System.putInt(context.getContentResolver(), Settings.System.USER_ROTATION, Surface.ROTATION_0);
 
     }
