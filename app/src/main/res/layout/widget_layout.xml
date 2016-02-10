@@ -5,7 +5,7 @@
               android:orientation="horizontal">
     <ImageButton
             android:src="@drawable/ic_redo_white_36dp"
-            android:id="@+id/left"
+            android:id="@+id/cw"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -19,7 +19,7 @@
             android:contentDescription="@string/cd_auto_rotate_screen"/>
     <ImageButton
             android:src="@drawable/ic_undo_white_36dp"
-            android:id="@+id/right"
+            android:id="@+id/ccw"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"

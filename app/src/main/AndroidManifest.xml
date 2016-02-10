@@ -22,13 +22,13 @@
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
              <intent-filter>
-                <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_LEFT" />
+                <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_CW" />
             </intent-filter>
              <intent-filter>
                 <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_AUTO" />
             </intent-filter>
              <intent-filter>
-                <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_RIGHT" />
+                <action android:name="com.melontech.ACTION_FORCE_ORIENTATION_CCW" />
             </intent-filter>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/force_orientation_appwidget_info" />
         </receiver>
