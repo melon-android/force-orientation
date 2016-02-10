@@ -3,4 +3,5 @@
     <string name="cd_rotate_clockwise">Rotate screen counter-clockwise</string>
     <string name="cd_rotate_counter_clockwise">Rotate screen clockwise</string>
     <string name="cd_auto_rotate_screen">Enable free screen rotation</string>
+    <string name="error_no_roation_setting">Error: This device does not support rotation!</string>
 </resources>
