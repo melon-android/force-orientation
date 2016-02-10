@@ -8,19 +8,20 @@
             android:id="@+id/left"
             android:layout_width="wrap_content"
             android:layout_weight="1"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:contentDescription="@string/cd_rotate_clockwise"/>
     <ImageButton
             android:src="@drawable/ic_filter_tilt_shift_white_36dp"
             android:id="@+id/auto"
             android:layout_width="wrap_content"
             android:layout_weight="1"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:contentDescription="@string/cd_auto_rotate_screen"/>
     <ImageButton
             android:src="@drawable/ic_undo_white_36dp"
             android:id="@+id/right"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            />
-
+            android:contentDescription="@string/cd_rotate_counter_clockwise"/>
 </LinearLayout>
