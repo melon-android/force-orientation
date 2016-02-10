@@ -3,20 +3,24 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="horizontal">
-    <Button
+    <ImageButton
+            android:src="@drawable/ic_redo_white_36dp"
             android:id="@+id/left"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"/>
-    <Button
+    <ImageButton
+            android:src="@drawable/ic_filter_tilt_shift_white_36dp"
             android:id="@+id/auto"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"/>
-    <Button
+    <ImageButton
+            android:src="@drawable/ic_undo_white_36dp"
             android:id="@+id/right"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_weight="1"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            />
 
 </LinearLayout>
